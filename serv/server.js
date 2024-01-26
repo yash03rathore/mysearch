@@ -6,10 +6,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-
   
 
 const OPENAI_AI_KEY = process.env.OPENAI_AI_KEY
+app.options('/completions', cors());
 
 app.post('/completions', async(req, res) => {
     
